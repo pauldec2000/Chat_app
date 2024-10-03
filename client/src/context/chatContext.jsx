@@ -22,7 +22,7 @@ export const ChatContextProvider = ({ children, user }) => {
   const [allUsers, setAllUsers] = useState([]);
   console.log(notifications, "notifications..");
   useEffect(() => {
-    const newSocket = io("http://localhost:8000");
+    const newSocket = io("https://chat-app-m71j.onrender.com/");
     setSocket(newSocket);
     return () => {
       newSocket.disconnect();
